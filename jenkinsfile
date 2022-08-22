@@ -7,6 +7,7 @@ stages{
                 url: 'https://github.com/PoojaVika/K8s.git'
 
             sh "ls -lat"
+            sh "pwd"
         }
     }
 }
