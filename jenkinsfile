@@ -1,5 +1,8 @@
 pipeline{
       agent any
+      environment {
+		DOCKERHUB_CREDENTIALS=credentials('docker_creds')
+            }
 stages{
       stage('Checkout external project') {
         steps {
@@ -10,5 +13,27 @@ stages{
             sh "pwd"
         }
     }
-}
-}
+       stage('build'){
+          steps{
+                        sh "pwd"
+                        sh "ls"
+                        sh "cd hello-world-war"
+                        sh "echo ${BUILD_NUMBER}"
+                        sh "docker build -t poovikas/tomcat:9.0 ."
+                  }
+            }
+    stage('publish') {
+            steps {
+                sh "echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
+                sh "sudo docker push"
+		    sh "sudo helm package --version ${BUILD_NUMBER} helm/tomcat/ "
+    }
+  }
+  stage('deploy'){
+                 agent { label 'kubernetes' }
+                 steps{
+                 sh "helm install tomcat-helm ./helm/tomcat/" 
+                 }
+            }
+  }
+  }
