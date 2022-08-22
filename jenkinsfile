@@ -1,0 +1,11 @@
+pipeline{
+      agent { label 'java' }
+      stage('Checkout external project') {
+        steps {
+            git branch: 'main',
+                url: 'https://github.com/PoojaVika/K8s.git'
+
+            sh "ls -lat"
+        }
+    }
+    }
