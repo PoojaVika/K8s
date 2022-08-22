@@ -1,5 +1,6 @@
 pipeline{
       agent { label 'java' }
+stages{
       stage('Checkout external project') {
         steps {
             git branch: 'main',
@@ -8,4 +9,5 @@ pipeline{
             sh "ls -lat"
         }
     }
-    }
+}
+}
