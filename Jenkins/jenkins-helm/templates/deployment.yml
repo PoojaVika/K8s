@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployment_name }}  
+spec:
+  replicas: {{ .Values.replicas_no }}
+  selector:
+    matchLabels:
+      app: {{ .Values.selector_name }}
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: {{ .Values.maxSurge }}
+      maxUnavailable: {{ .Values.maxunavail }}
+  template:  
+    metadata:
+      name: {{ .Values.deployment_name }}
+      labels:
+        app: {{ .Values.labels_name }}
+    spec:
+      containers:
+        - name: {{ .Values.container_name }}
+          image: {{ .Values.image_name }}:{{ .Values.tag_name }}
+          command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+          volumeMounts:
+          - name: {{ .Values.volume_mount_name }}
+            mountPath: /var/jenkins_home  #/usr/local/tomcat/webapps/
+      volumes:
+      - name: {{ .Values.volume_mount_name }}
+        secret: 
+          secretName: {{ .Values.secrete_name }}
+

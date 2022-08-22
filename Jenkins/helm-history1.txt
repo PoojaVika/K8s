@@ -1,0 +1,105 @@
+  506  JE
+  507  cd Jenkins/
+  508  ls
+  509  kubectl get endpoibts
+  510  kubectl get endpoints
+  511  kubectl get pods
+  512  kubectl get pods -owide
+  513  kubectl get svc
+  514  kubectl get endpoints
+  515  vi secret.yml 
+  516  kubectl apply -f secret.yml 
+  517  kubectl get pods
+  518  kubectl get svc
+  519  kubectl get endpoints
+  520  kubectl get pods
+  521  kubectl get pods --show-label app=jenkins
+  522  kubectl get pods --show-labels app=jenkins
+  523  kubectl get pods --selector=app=jenkins
+  524  kubectl get pods -owide
+  525  kubectl get ing
+  526  kubectl get pods -A
+  527  curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+  528  sudo apt-get install apt-transport-https --yes
+  529  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+  530  sudo apt-get update
+  531  sudo apt-get install helm
+  532  helm version
+  533  ls
+  534  helm create jenkins-helm
+  535  apt install tree
+  536  tree
+  537  tree jenkins-heml
+  538  tree jenkins-helm
+  539  vi Chart.yaml
+  540  cd jenkins-helm/
+  541  ls
+  542  vi Chart.yaml 
+  543  cd charts/
+  544  ls
+  545  cd ..
+  546  rm -rf charts/
+  547  ls
+  548  tree jenkins-helm
+  549  cd ..
+  550  tree jenkins-helm/
+  551  cd jenkins-helm/
+  552  ls
+  553  cd templates/
+  554  ls
+  555  rm -rf *
+  556  ls
+  557  cd ../..
+  558  ls
+  559  cp secret.yml jenkins-helm/templates/
+  560  ce jenkins-helm/
+  561  cd jenkins-helm/
+  562  ls
+  563  cd templates/
+  564  ls
+  565  vi secret.yml 
+  566  vi secret-service.yml
+  567  ls
+  568  cat secret
+  569  cat secret.yml 
+  570  ls
+  571  cd ..
+  572  ls
+  573  vi values.yaml 
+  574  cat values.yaml 
+  575  cd ..
+  576  ls
+  577  kubectl get deployments
+  578  kubectl delete deployments secret
+  579  kubectl delete service --all
+  580  ls
+  581  helm install jenkins-deployment
+  582  helm install jenkins-deployment jenkins-helm/
+  583  helm ls
+  584  kubectl get pods
+  585  kubectl get svc
+  586  helm uninstall jenkins-deployment.yml 
+  587  helm uninstall jenkins-deployment
+  588  helm ls
+  589  kubectl get svc
+  590  kubectl get pods
+  591  cd jenkins-helm/
+  592  ls
+  593  cd templates/
+  594  ls
+  595  cd ../..
+  596  history
+  597  kubectl get svc
+  598  helm install jenkinss jenkins-helm/
+  599  kubectl get svc
+  600  kubectl get pods
+  601  kubectl port-forward secret-db7f85864-2xhht 7080:8080
+  602  kubectl get pods -owide
+  603  kubectl port-forward secret-db7f85864-2xhht 7080:8080
+  604  history
+  605  history | tail -250 > helm-history.txt
+  606  cat helm-history.txt 
+  607  history | tail -200 > helm-history1.txt
+  608  cat helm-history1.txt 
+  609  rm helm-history1.txt 
+  610  history | tail -105 > helm-history1.txt

@@ -1,0 +1,15 @@
+deployment_name: jenkins
+replicas_no: 3
+selector_name: jenkins
+maxSurge: 1
+maxunavail: 0
+labels_name: jenkins
+container_name: jenkins
+image_name: jenkins/jenkins
+tag_name: lts
+volume_mount_name: vol-jenkins
+secrete_name: my-secrete
+
+service_name: jenkins
+port_no: 8010
+target_port: 8080

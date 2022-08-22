@@ -1,0 +1,250 @@
+  356  kubectl get nodes
+  357  kubectl get pods
+  358  kubectl -version
+  359  kubectl --version
+  360  kubectl --v
+  361  kubernetes --v
+  362  docker version
+  363  kubectl describe nodes
+  364  ls
+  365  cd K8s/
+  366  ls
+  367  cd Jenkins/
+  368  ls
+  369  vi confP.xml
+  370  kubectl apply -f confP.xml 
+  371  kubectl create configmap Pconfg1 --from-file confP.xml 
+  372  kubectl create configmap pconfg1 --from-file confP.xml 
+  373  kubectl get confg
+  374  kubectl get confgimap
+  375  kubectl get configmap
+  376  kubectl describe confgimap pconfg1
+  377  kubectl describe configmap pconfg1
+  378  ls
+  379  vi jenkins-deployment.yml 
+  380  cp jenkins-deployment.yml configmap.yml
+  381  vi configmap.yml 
+  382  kubectl delete -f jenkins-deployment.yml 
+  383  kubectl create -f jenkins-deployment.yml 
+  384  kubectl get pods
+  385  kubectl exec -it pod jenk-deployment-6447b875f7-fdsck
+  386  kubectl exec -it jenk-deployment-6447b875f7-fdsck /bin/bash
+  387  vi pooja.xml
+  388  vi vikas.xml
+  389  kubectl create configmap pvcong1 --from-file=pooja.xml --from-file=vikas.xml 
+  390  kubectl get configmap
+  391  kubectl describe cm
+  392  apply delete -f configmap.yml 
+  393  kubectl delete -f configmap.yml 
+  394  vi configmap.yml 
+  395  kubectl apply -f configmap.yml 
+  396  kubectl get pods
+  397  vi configmap.yml 
+  398  kubectl delete -f configmap.yml 
+  399  kubectl apply -f configmap.yml 
+  400  kubectl get pods
+  401  kubectl describe jenk-deployment-55cf554556-6wpb4 
+  402  kubectl describe pod jenk-deployment-55cf554556-6wpb4 
+  403  vi configmap.yml 
+  404  kubectl delete -f configmap.yml 
+  405  kubectl apply -f configmap.yml 
+  406  vi configmap.yml 
+  407  kubectl delete -f configmap.yml 
+  408  kubectl apply -f configmap.yml 
+  409  kubectl get pods
+  410  kubectl exec -it jenk-deployment-7678999444-5tgvx /bin/bash
+  411  kubectl exec -it jenk-deployment-7678999444-84scf /bin/bash
+  412  kubectl exec -it jenk-deployment-7678999444-n7vbw /bin/bash
+  413  vi configmap.yml 
+  414  echo -n 'poo' > ./username.txt
+  415  ls
+  416  -
+  417  sudo su -
+  418  ls
+  419  cd K8s/
+  420  cd Jenkins/
+  421  ls
+  422  vi username.txt 
+  423  echo -n '1f2d1e2e67df' > ./password.txt
+  424  ls
+  425  rm username.txt sec-un.txt
+  426  ls
+  427  echo -n 'POOJA' > ./sec-un.txt
+  428  mv password.txt sec-passwd.txt
+  429  ls
+  430  cat sec-passwd.txt 
+  431  ls
+  432  kubectl create secret generic secret-creadentials   --from-file=./sec-un.txt   --from-file=./sec-passwd.txt
+  433  kubectl get sc
+  434  kubectl get secret
+  435  kubectl describe secret secret-credentials
+  436  kubectl describe secret secret-creadentials
+  437  cd K8s/
+  438  cd Jenkins/
+  439  ls
+  440  kubectl get secret secret-user-data -o jsonpath='{.data}'
+  441  kubectl get sec
+  442  kubectl get secret secret-creadentials -o jsonpath='{.data}'
+  443  cd K8s/
+  444  cd Jenkins/
+  445  ls
+  446  kubectl get secrete
+  447  kubectl get secret
+  448  kubectl get secret secret-creadentials -o jsonpath='{.data}'
+  449  "MWYyZDFlMmU2N2Rm" | base64 --decode
+  450  kubectl get secret secret-creadentials -o jsonpath='{.data}'
+  451  "MWYyZDFlMmU2N2Rm"|base64 --decode
+  452  kubectl get secret secret-creadentials -o jsonpath='{.data}'
+  453  echo "MWYyZDFlMmU2N2Rm"|base64 --decode
+  454  kubectl get secret secret-creadentials -o jsonpath='{.data}'
+  455  echo "UE9PSkE="|base64 --decode
+  456  exit
+  457  ls
+  458  cd K8s/
+  459  cd Jenkins/
+  460  ls
+  461  cp configmap.yml secret.yml
+  462  vi secret.yml 
+  463  kubectl create -f secret.yml 
+  464  kubectl get pods
+  465  kubectl exec -it secret-f74c64cdd-hrzww /bin/bash
+  466  kubectl exec -it secret-f74c64cdd-wfzfk /bin/bash
+  467  ls
+  468  cd K8s/
+  469  cd Jenkins/
+  470  ls
+  471  cat secret.yml 
+  472  cat configmap.yml 
+  473  kubectl get pods
+  474  kubectl delete pods --all
+  475  kubectl get pods
+  476  kubectl delete -f jenkins-deployment.yml 
+  477  kubectl delete -f secret.yml 
+  478  kubectl delete -f configmap.yml 
+  479  kubectl get pods
+  480  kubectl delete -f hpa.yml 
+  481  kubectl get pods
+  482  kubectl describe ns 
+  483  kubectl apply -f hpa.yml 
+  484  kubectl get pods
+  485  kubectl describe ns 
+  486  ls
+  487  vi 2secret.yml
+  488  echo -n 'POOJA' | base64
+  489  echo -n '4sm12cs013' | base64
+  490  vi 2secret.yml
+  491  kubectl apply -f 2secret.yml 
+  492  kubectl get pods
+  493  kubectl get secret
+  494  kubectl describe my-secret
+  495  kubectl describe my-secrete
+  496  kubectl describe secret my-secrete
+  497  kubectl describe secret secret-creadentials
+  498  kubectl get pods
+  499  vi secret.yml 
+  500  kubectl apply -f secret.yml 
+  501  kubectl get pods
+  502  kubectl exec -it secret-db7f85864-25247 /bin/bash
+  503  ls
+  504  cd K8s/
+  505  ls
+  506  JE
+  507  cd Jenkins/
+  508  ls
+  509  kubectl get endpoibts
+  510  kubectl get endpoints
+  511  kubectl get pods
+  512  kubectl get pods -owide
+  513  kubectl get svc
+  514  kubectl get endpoints
+  515  vi secret.yml 
+  516  kubectl apply -f secret.yml 
+  517  kubectl get pods
+  518  kubectl get svc
+  519  kubectl get endpoints
+  520  kubectl get pods
+  521  kubectl get pods --show-label app=jenkins
+  522  kubectl get pods --show-labels app=jenkins
+  523  kubectl get pods --selector=app=jenkins
+  524  kubectl get pods -owide
+  525  kubectl get ing
+  526  kubectl get pods -A
+  527  curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+  528  sudo apt-get install apt-transport-https --yes
+  529  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+  530  sudo apt-get update
+  531  sudo apt-get install helm
+  532  helm version
+  533  ls
+  534  helm create jenkins-helm
+  535  apt install tree
+  536  tree
+  537  tree jenkins-heml
+  538  tree jenkins-helm
+  539  vi Chart.yaml
+  540  cd jenkins-helm/
+  541  ls
+  542  vi Chart.yaml 
+  543  cd charts/
+  544  ls
+  545  cd ..
+  546  rm -rf charts/
+  547  ls
+  548  tree jenkins-helm
+  549  cd ..
+  550  tree jenkins-helm/
+  551  cd jenkins-helm/
+  552  ls
+  553  cd templates/
+  554  ls
+  555  rm -rf *
+  556  ls
+  557  cd ../..
+  558  ls
+  559  cp secret.yml jenkins-helm/templates/
+  560  ce jenkins-helm/
+  561  cd jenkins-helm/
+  562  ls
+  563  cd templates/
+  564  ls
+  565  vi secret.yml 
+  566  vi secret-service.yml
+  567  ls
+  568  cat secret
+  569  cat secret.yml 
+  570  ls
+  571  cd ..
+  572  ls
+  573  vi values.yaml 
+  574  cat values.yaml 
+  575  cd ..
+  576  ls
+  577  kubectl get deployments
+  578  kubectl delete deployments secret
+  579  kubectl delete service --all
+  580  ls
+  581  helm install jenkins-deployment
+  582  helm install jenkins-deployment jenkins-helm/
+  583  helm ls
+  584  kubectl get pods
+  585  kubectl get svc
+  586  helm uninstall jenkins-deployment.yml 
+  587  helm uninstall jenkins-deployment
+  588  helm ls
+  589  kubectl get svc
+  590  kubectl get pods
+  591  cd jenkins-helm/
+  592  ls
+  593  cd templates/
+  594  ls
+  595  cd ../..
+  596  history
+  597  kubectl get svc
+  598  helm install jenkinss jenkins-helm/
+  599  kubectl get svc
+  600  kubectl get pods
+  601  kubectl port-forward secret-db7f85864-2xhht 7080:8080
+  602  kubectl get pods -owide
+  603  kubectl port-forward secret-db7f85864-2xhht 7080:8080
+  604  history
+  605  history | tail -250 > helm-history.txt

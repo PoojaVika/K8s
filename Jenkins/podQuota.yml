@@ -1,0 +1,8 @@
+apiVersion: v1 #to define how may pods can run on node
+kind: ResourceQuota
+metadata:
+  name: pod-quota
+  namespace: default
+spec:
+  hard:
+    pods: "3"

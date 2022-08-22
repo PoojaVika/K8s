@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pvc-volume 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jenkins
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:  
+    metadata:
+      name: jenkins-pod
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - name: jenk-container
+          image: jenkins/jenkins:latest
+          command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+          volumeMounts:
+          - name: pvc-volume
+            mountPath: /var/jenkins_home/  #/usr/local/tomcat/webapps/
+      volumes:
+      - name: pvc-volume
+        persistentVolumeClaim:
+          claimName: pvc
+
