@@ -17,7 +17,7 @@ stages{
           steps{
                         sh "pwd"
                         sh "ls"
-                        sh "cd K8s"
+                        sh "cd K8s/Jenkins"
                         sh "echo ${BUILD_NUMBER}"
                         sh "docker build -t poovikas/tomcat:9.0 ."
                   }
